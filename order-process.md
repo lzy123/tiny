@@ -8,7 +8,7 @@
   - 解决上述的方式，采用设置库存，而非直接扣减更新库存，且通过版本号或旧库存新旧数据判断,伪代码：<br />
     transaction  
     
-    select stock as old_stock,[或者 version] from stock_table where sid=sid
+    select stock as old_stock,  [或者 version]  from stock_table where sid=sid
     
     update  stock_table set stock = new_stock where sid=sid and stock=old_stock
     
